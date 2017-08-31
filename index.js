@@ -328,7 +328,7 @@ var myForm = {
                 testedEmailValue = emailValue.split(' ').join('');
                 var testedEmailValue;
                 console.log(emailValue);
-                if (/([\w\d]{3,30}[@]{1}[ya]{2}[.]{1}[ru]{2})|([\w\d]{3,30}[@]{1}[yandex]{6}[.]{1}[ru|ua|by|kz|com]{2})/.test(testedEmailValue)) {
+                if (/^([\w\d]{3,30}[@]{1}[ya]{2}[.]{1}[ru]{2})$|^([\w\d]{3,30}[@]{1}[yandex]{6}[.]{1}[ru|ua|by|kz|com]{2})$/.test(testedEmailValue)) {
                     if(validatedForm.errorFields.indexOf('email') !== -1) {
                         validatedForm.errorFields.splice(validatedForm.errorFields.indexOf('email'), 1 );
                     }
