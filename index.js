@@ -123,11 +123,11 @@ var myForm = {
                     var response = JSON.parse(xmlHttp.response);
                     if (response.status === 'success') {
                         resultContainer.className = 'success';
-                        resultContainer.innerHTML = response.status
+                        resultContainer.innerHTML = 'Success'
                     }
                     else if (response.status === 'error') {
                         resultContainer.className = 'error';
-                        resultContainer.innerHTML = response.status
+                        resultContainer.innerHTML = response.reason
                     }
                     else {
                         resultContainer.className = 'loading';
